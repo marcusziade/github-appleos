@@ -1,7 +1,7 @@
 import Foundation
 
 struct GitHubUser: Codable, Identifiable {
-    let avatarURL: URL?
+    let avatarUrl: URL?
     let bio: String?
     let blog: String?
     let collaborators: Int
@@ -9,31 +9,31 @@ struct GitHubUser: Codable, Identifiable {
     let createdAt: String
     let diskUsage: Int
     let email: String?
-    let eventsURL: URL?
+    let eventsUrl: URL
     let followers: Int
-    let followersURL: URL?
+    let followersUrl: URL
     let following: Int
-    let followingURL: URL?
-    let gistsURL: URL?
+    let followingUrl: URL
+    let gistsUrl: URL
     let gravatarID: String?
     let hireable: Bool?
     let id: Int
     let location: String?
     let login: String
     let name: String
-    let organizationsURL: URL?
+    let organizationsUrl: URL
     let ownedPrivateRepos: Int
     let plan: Plan
     let privateGists: Int
     let publicGists: Int
     let publicRepos: Int
-    let receivedEventsURL: URL?
-    let reposURL: URL?
+    let receivedEventsUrl: URL
+    let reposUrl: URL
     let siteAdmin: Bool
-    let starredURL: URL?
-    let subscriptionsURL: URL?
+    let starredUrl: URL
+    let subscriptionsUrl: URL
     let totalPrivateRepos: Int
-    let twitterUsername: String?
+    let twitterUsername: String
     let twoFactorAuthentication: Bool
     let type: String
     let updatedAt: String
@@ -48,19 +48,19 @@ struct License: Codable {
 }
 
 struct Owner: Codable, Identifiable {
-    let avatarURL: URL?
-    let eventsURL: URL?
-    let followersURL: URL?
-    let gistsURL: URL?
+    let avatarUrl: URL
+    let eventsUrl: URL
+    let followersUrl: URL
+    let gistsUrl: URL
     let gravatarID: String?
     let id: Int
     let login: String
-    let organizationsURL: URL?
-    let receivedEventsURL: URL?
-    let reposURL: URL?
+    let organizationsUrl: URL
+    let receivedEventsUrl: URL
+    let reposUrl: URL
     let siteAdmin: Bool
-    let starredURL: URL?
-    let subscriptionsURL: URL?
+    let starredUrl: URL
+    let subscriptionsUrl: URL
     let type: String
     let url: URL
 }
@@ -82,10 +82,10 @@ struct Plan: Codable {
 
 struct Repository: Codable, Identifiable {
     let allowForking: Bool
-    let collaboratorsURL: URL?
+    let collaboratorsUrl: URL
     let defaultBranch: String
     let description: String?
-    let eventsURL: URL?
+    let eventsUrl: URL
     let forks: Int
     let forksURL: URL?
     let fullName: String
@@ -93,8 +93,8 @@ struct Repository: Codable, Identifiable {
     let hooksURL: URL?
     let id: Int
     let isTemplate: Bool
-    let issueEventsURL: URL?
-    let keysURL: URL?
+    let issueEventsUrl: URL
+    let keysUrl: URL
     let license: License?
     let name: String
     let openIssues: Int

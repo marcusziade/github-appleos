@@ -8,8 +8,31 @@ struct ContentView: View {
     
     var body: some View {
         ScrollView {
+            VStack {
+                AsyncImage(url: user?.avatarUrl) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 100)
+                } placeholder: {
+                    ProgressView()
+                }
+                Text(user?.name ?? "No name")
+                    .font(.headline)
+                Text(user?.bio ?? "No bio")
+                    .foregroundColor(.gray)
+            }
             ForEach(repositories) { repo in
                 HStack {
+                    AsyncImage(url: repo.owner.avatarUrl) { image in
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 100)
+                    } placeholder: {
+                        ProgressView()
+                    }
+
                     VStack(alignment: .leading) {
                         Text(repo.name)
                             .font(.headline)

@@ -26,6 +26,8 @@ final class GitHubService {
         
         let (data, _) = try await session.data(for: request)
         
+        print("Data: \(String(data: data, encoding: .utf8) ?? "")")
+        
         do {
             let decodedData = try jsonDecoder.decode(T.self, from: data)
             return decodedData
