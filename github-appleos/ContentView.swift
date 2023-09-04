@@ -30,6 +30,7 @@ struct ContentView: View {
                 loadUserData()
                 loadStarredRepos()
             }
+            .navigationViewStyle(.stack)
         }
     }
     
@@ -154,7 +155,7 @@ struct RepositoryView: View {
                         Text("\(repo.watchers)")
                     }
                 }
-
+                
                 Text("Forks: \(repo.forks)")
                     .font(.subheadline)
                 
@@ -195,76 +196,21 @@ struct RepositoryDetailView: View {
                 Text("Owner Type: \(repo.owner.type)")
                 
                 Text("Gravatar ID: \(repo.owner.gravatarId)")
-                
-                NavigationLink("View Owner Profile", destination: URLDetailView(url: repo.owner.url))
             }
             
             Section(header: Text("Repository URLs")) {
-                if let hooksURL = repo.hooksURL {
-                    NavigationLink("Hooks URL", destination: URLDetailView(url: hooksURL))
-                }
-                
-                if let forksURL = repo.forksURL {
-                    NavigationLink("Forks URL", destination: URLDetailView(url: forksURL))
-                }
-                
-                NavigationLink("Events URL", destination: URLDetailView(url: repo.eventsUrl))
             }
             
             if let license = repo.license {
                 Section(header: Text("License Info")) {
                     Text("License Name: \(license.name)")
                     Text("SPDX ID: \(license.spdxId)")
-                    
-                    if let licenseURL = license.url {
-                        URLDetailView(url: URL(string: licenseURL)!)
-                    }
                 }
             }
         }
         .navigationTitle("Repository Details")
     }
 }
-
-struct URLDetailView: View {
-    let url: URL
-    
-    var body: some View {
-#if os(iOS)
-        WebView(url: url)
-            .navigationTitle("Web View")
-#endif
-    }
-}
-
-#if os(iOS)
-struct WebView: UIViewRepresentable {
-    let url: URL
-    
-    func makeUIView(context: Context) -> WKWebView {
-        let webView = WKWebView()
-        webView.navigationDelegate = context.coordinator
-        return webView
-    }
-    
-    func updateUIView(_ uiView: WKWebView, context: Context) {
-        let request = URLRequest(url: url)
-        uiView.load(request)
-    }
-    
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
-    
-    class Coordinator: NSObject, WKWebViewNavigationDelegate {
-        var parent: WebView
-        
-        init(_ parent: WebView) {
-            self.parent = parent
-        }
-    }
-}
-#endif
 
 #Preview {
     ContentView()

@@ -1,10 +1,3 @@
-//
-//  github_appleosApp.swift
-//  github-appleos
-//
-//  Created by Marcus Ziadé on 3.9.2023.
-//
-
 import SwiftUI
 
 @main

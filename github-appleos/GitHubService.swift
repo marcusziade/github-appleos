@@ -6,6 +6,8 @@ final class GitHubService {
     
     private init() {}
     
+    private var cache = NSCache<NSString, NSData>()
+    
     func fetch<T: Codable>(endpoint: Endpoint) async throws -> T {
         var components = URLComponents()
         components.scheme = "http"
@@ -16,6 +18,13 @@ final class GitHubService {
         
         guard let url = components.url else {
             throw APIError.invalidURL
+        }
+        
+        let urlString = url.absoluteString as NSString
+        
+        if let cachedData = cache.object(forKey: urlString) {
+            let decodedData = try jsonDecoder.decode(T.self, from: cachedData as Data)
+            return decodedData
         }
         
         var request = URLRequest(url: url)
@@ -29,6 +38,7 @@ final class GitHubService {
         
         do {
             let decodedData = try jsonDecoder.decode(T.self, from: data)
+            cache.setObject(data as NSData, forKey: urlString)
             return decodedData
         } catch {
             throw APIError.invalidData
