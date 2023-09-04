@@ -19,6 +19,7 @@ final class GitHubService {
         }
         
         var request = URLRequest(url: url)
+        request.httpMethod = endpoint.httpMethod
         request.addValue("Bearer \(Keys.githubAPIKey)", forHTTPHeaderField: "Authorization")
         request.addValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -26,13 +27,10 @@ final class GitHubService {
         
         let (data, _) = try await session.data(for: request)
         
-        print("Data: \(String(data: data, encoding: .utf8) ?? "")")
-        
         do {
             let decodedData = try jsonDecoder.decode(T.self, from: data)
             return decodedData
         } catch {
-            print("Decoding failed with error: \(error)")
             throw APIError.invalidData
         }
     }

@@ -4,6 +4,7 @@ protocol Endpoint {
     var baseURL: String { get }
     var path: String { get }
     var queryItems: [URLQueryItem] { get }
+    var httpMethod: String { get }
 }
 
 extension Endpoint {
@@ -39,6 +40,17 @@ enum GitHubEndpoint: Endpoint {
             return [URLQueryItem(name: "pages", value: String(pages))]
         default:
             return []
+        }
+    }
+    
+    var httpMethod: String {
+        switch self {
+        case .getUser:
+            return "GET"
+        case .getAuthUser:
+            return "GET"
+        case .getStarred:
+            return "GET"
         }
     }
 }
