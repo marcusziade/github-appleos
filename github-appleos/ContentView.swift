@@ -30,7 +30,9 @@ struct ContentView: View {
                 loadUserData()
                 loadStarredRepos()
             }
+#if os(iOS)
             .navigationViewStyle(.stack)
+#endif
         }
     }
     
