@@ -11,6 +11,10 @@
 		5A7D94D52AA5051D001A97E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D94D42AA5051D001A97E8 /* ContentView.swift */; };
 		5A7D94D72AA5051E001A97E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D94D62AA5051E001A97E8 /* Assets.xcassets */; };
 		5A7D94DB2AA5051E001A97E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D94DA2AA5051E001A97E8 /* Preview Assets.xcassets */; };
+		5A7D94E22AA506A2001A97E8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D94E12AA506A2001A97E8 /* Endpoint.swift */; };
+		5A7D94E42AA506D4001A97E8 /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D94E32AA506D4001A97E8 /* GitHubService.swift */; };
+		5A7D94E62AA5078A001A97E8 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D94E52AA5078A001A97E8 /* Models.swift */; };
+		5A7D94E82AA508DA001A97E8 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D94E72AA508DA001A97E8 /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		5A7D94D62AA5051E001A97E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A7D94D82AA5051E001A97E8 /* github_appleos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = github_appleos.entitlements; sourceTree = "<group>"; };
 		5A7D94DA2AA5051E001A97E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5A7D94E12AA506A2001A97E8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		5A7D94E32AA506D4001A97E8 /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
+		5A7D94E52AA5078A001A97E8 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		5A7D94E72AA508DA001A97E8 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,10 @@
 			children = (
 				5A7D94D22AA5051D001A97E8 /* github_appleosApp.swift */,
 				5A7D94D42AA5051D001A97E8 /* ContentView.swift */,
+				5A7D94E12AA506A2001A97E8 /* Endpoint.swift */,
+				5A7D94E32AA506D4001A97E8 /* GitHubService.swift */,
+				5A7D94E72AA508DA001A97E8 /* Keys.swift */,
+				5A7D94E52AA5078A001A97E8 /* Models.swift */,
 				5A7D94D62AA5051E001A97E8 /* Assets.xcassets */,
 				5A7D94D82AA5051E001A97E8 /* github_appleos.entitlements */,
 				5A7D94D92AA5051E001A97E8 /* Preview Content */,
@@ -140,7 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A7D94D52AA5051D001A97E8 /* ContentView.swift in Sources */,
+				5A7D94E82AA508DA001A97E8 /* Keys.swift in Sources */,
+				5A7D94E22AA506A2001A97E8 /* Endpoint.swift in Sources */,
+				5A7D94E42AA506D4001A97E8 /* GitHubService.swift in Sources */,
 				5A7D94D32AA5051D001A97E8 /* github_appleosApp.swift in Sources */,
+				5A7D94E62AA5078A001A97E8 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
