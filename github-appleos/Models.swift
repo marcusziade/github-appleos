@@ -15,7 +15,7 @@ struct GitHubUser: Codable, Identifiable {
     let following: Int
     let followingUrl: URL
     let gistsUrl: URL
-    let gravatarID: String?
+    let gravatarId: String?
     let hireable: Bool?
     let id: Int
     let location: String?
@@ -43,7 +43,7 @@ struct GitHubUser: Codable, Identifiable {
 struct License: Codable {
     let key: String
     let name: String
-    let spdxID: String?
+    let spdxId: String
     let url: String?
 }
 
@@ -52,7 +52,7 @@ struct Owner: Codable, Identifiable {
     let eventsUrl: URL
     let followersUrl: URL
     let gistsUrl: URL
-    let gravatarID: String?
+    let gravatarId: String
     let id: Int
     let login: String
     let organizationsUrl: URL
