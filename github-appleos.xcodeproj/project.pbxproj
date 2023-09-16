@@ -17,8 +17,10 @@
 		5A7D94DB2AA5051E001A97E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D94DA2AA5051E001A97E8 /* Preview Assets.xcassets */; };
 		5A7D94E22AA506A2001A97E8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D94E12AA506A2001A97E8 /* Endpoint.swift */; };
 		5A7D94E42AA506D4001A97E8 /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D94E32AA506D4001A97E8 /* GitHubService.swift */; };
-		5A7D94E62AA5078A001A97E8 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D94E52AA5078A001A97E8 /* Models.swift */; };
-		5A7D94E82AA508DA001A97E8 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D94E72AA508DA001A97E8 /* Keys.swift */; };
+		5A7D94E62AA5078A001A97E8 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D94E52AA5078A001A97E8 /* Repository.swift */; };
+		5A82AC8D2AB616C3005C5FEC /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A82AC8C2AB616C3005C5FEC /* GitHubUser.swift */; };
+		5A82AC8F2AB6170D005C5FEC /* ImageDataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A82AC8E2AB6170D005C5FEC /* ImageDataList.swift */; };
+		5A82AC942AB61949005C5FEC /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A82AC932AB61949005C5FEC /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +36,10 @@
 		5A7D94DA2AA5051E001A97E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5A7D94E12AA506A2001A97E8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		5A7D94E32AA506D4001A97E8 /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
-		5A7D94E52AA5078A001A97E8 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		5A7D94E72AA508DA001A97E8 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		5A7D94E52AA5078A001A97E8 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		5A82AC8C2AB616C3005C5FEC /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
+		5A82AC8E2AB6170D005C5FEC /* ImageDataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataList.swift; sourceTree = "<group>"; };
+		5A82AC932AB61949005C5FEC /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,18 +73,12 @@
 			isa = PBXGroup;
 			children = (
 				5A7D94D22AA5051D001A97E8 /* github_appleosApp.swift */,
+				5A82AC902AB61725005C5FEC /* API */,
 				5A7D94D42AA5051D001A97E8 /* ContentView.swift */,
 				5A41C7B82AAD0DFB00418085 /* RepositoryDetailView.swift */,
 				5A41C7B62AAD0DDC00418085 /* RepositoryRow.swift */,
 				5A41C7B42AAD0D4300418085 /* UserDetailView.swift */,
-				5A7D94E12AA506A2001A97E8 /* Endpoint.swift */,
-				5A7D94E32AA506D4001A97E8 /* GitHubService.swift */,
-				5A41C7BC2AADD75700418085 /* APIError.swift */,
-				5A7D94E72AA508DA001A97E8 /* Keys.swift */,
-				5A7D94E52AA5078A001A97E8 /* Models.swift */,
-				5A7D94D62AA5051E001A97E8 /* Assets.xcassets */,
-				5A7D94D82AA5051E001A97E8 /* github_appleos.entitlements */,
-				5A7D94D92AA5051E001A97E8 /* Preview Content */,
+				5A82AC912AB6173E005C5FEC /* Resources */,
 			);
 			path = "github-appleos";
 			sourceTree = "<group>";
@@ -91,6 +89,38 @@
 				5A7D94DA2AA5051E001A97E8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5A82AC902AB61725005C5FEC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5A82AC922AB61782005C5FEC /* Models */,
+				5A7D94E12AA506A2001A97E8 /* Endpoint.swift */,
+				5A41C7BC2AADD75700418085 /* APIError.swift */,
+				5A7D94E32AA506D4001A97E8 /* GitHubService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5A82AC912AB6173E005C5FEC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5A7D94D62AA5051E001A97E8 /* Assets.xcassets */,
+				5A7D94D82AA5051E001A97E8 /* github_appleos.entitlements */,
+				5A7D94D92AA5051E001A97E8 /* Preview Content */,
+				5A82AC932AB61949005C5FEC /* Keys.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5A82AC922AB61782005C5FEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A7D94E52AA5078A001A97E8 /* Repository.swift */,
+				5A82AC8E2AB6170D005C5FEC /* ImageDataList.swift */,
+				5A82AC8C2AB616C3005C5FEC /* GitHubUser.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,15 +194,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A7D94D52AA5051D001A97E8 /* ContentView.swift in Sources */,
-				5A7D94E82AA508DA001A97E8 /* Keys.swift in Sources */,
+				5A82AC942AB61949005C5FEC /* Keys.swift in Sources */,
 				5A7D94E22AA506A2001A97E8 /* Endpoint.swift in Sources */,
+				5A82AC8F2AB6170D005C5FEC /* ImageDataList.swift in Sources */,
 				5A41C7BD2AADD75700418085 /* APIError.swift in Sources */,
 				5A7D94E42AA506D4001A97E8 /* GitHubService.swift in Sources */,
 				5A41C7B52AAD0D4300418085 /* UserDetailView.swift in Sources */,
 				5A7D94D32AA5051D001A97E8 /* github_appleosApp.swift in Sources */,
 				5A41C7B92AAD0DFB00418085 /* RepositoryDetailView.swift in Sources */,
 				5A41C7B72AAD0DDC00418085 /* RepositoryRow.swift in Sources */,
-				5A7D94E62AA5078A001A97E8 /* Models.swift in Sources */,
+				5A7D94E62AA5078A001A97E8 /* Repository.swift in Sources */,
+				5A82AC8D2AB616C3005C5FEC /* GitHubUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,10 +330,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "github-appleos/github_appleos.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "github-appleos/Resources/github_appleos.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"github-appleos/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"github-appleos/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = P4DQK6SRKR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -336,10 +368,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "github-appleos/github_appleos.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "github-appleos/Resources/github_appleos.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"github-appleos/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"github-appleos/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = P4DQK6SRKR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;

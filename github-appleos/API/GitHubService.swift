@@ -18,7 +18,6 @@ final class GitHubService {
         components.queryItems = endpoint.queryItems
         
         guard let url = components.url else {
-            print("Error: Invalid URL")
             throw APIError.invalidURL
         }
         
@@ -27,10 +26,8 @@ final class GitHubService {
         if let cachedData = cache.object(forKey: urlString) {
             do {
                 let decodedData = try jsonDecoder.decode(T.self, from: cachedData as Data)
-                print("Info: Data retrieved from cache")
                 return decodedData
             } catch {
-                print("Error: Failed to decode cached data - \(error)")
                 throw APIError.cacheDecoding(error)
             }
         }
@@ -50,13 +47,10 @@ final class GitHubService {
             }
             
             let decodedData = try jsonDecoder.decode(T.self, from: data)
-            print("Success: Data decoded successfully")
             
             cache.setObject(data as NSData, forKey: urlString)
             return decodedData
         } catch {
-            print("Error: Data fetching or decoding failed - \(error)")
-            debugPrint(error.localizedDescription)
             throw APIError.invalidData
         }
     }
