@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A41C7B52AAD0D4300418085 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C7B42AAD0D4300418085 /* UserDetailView.swift */; };
+		5A41C7B72AAD0DDC00418085 /* RepositoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C7B62AAD0DDC00418085 /* RepositoryRow.swift */; };
+		5A41C7B92AAD0DFB00418085 /* RepositoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C7B82AAD0DFB00418085 /* RepositoryDetailView.swift */; };
+		5A41C7BD2AADD75700418085 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41C7BC2AADD75700418085 /* APIError.swift */; };
 		5A7D94D32AA5051D001A97E8 /* github_appleosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D94D22AA5051D001A97E8 /* github_appleosApp.swift */; };
 		5A7D94D52AA5051D001A97E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D94D42AA5051D001A97E8 /* ContentView.swift */; };
 		5A7D94D72AA5051E001A97E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D94D62AA5051E001A97E8 /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A41C7B42AAD0D4300418085 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		5A41C7B62AAD0DDC00418085 /* RepositoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRow.swift; sourceTree = "<group>"; };
+		5A41C7B82AAD0DFB00418085 /* RepositoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailView.swift; sourceTree = "<group>"; };
+		5A41C7BC2AADD75700418085 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		5A7D94CF2AA5051D001A97E8 /* github-appleos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "github-appleos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7D94D22AA5051D001A97E8 /* github_appleosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = github_appleosApp.swift; sourceTree = "<group>"; };
 		5A7D94D42AA5051D001A97E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,8 +70,12 @@
 			children = (
 				5A7D94D22AA5051D001A97E8 /* github_appleosApp.swift */,
 				5A7D94D42AA5051D001A97E8 /* ContentView.swift */,
+				5A41C7B82AAD0DFB00418085 /* RepositoryDetailView.swift */,
+				5A41C7B62AAD0DDC00418085 /* RepositoryRow.swift */,
+				5A41C7B42AAD0D4300418085 /* UserDetailView.swift */,
 				5A7D94E12AA506A2001A97E8 /* Endpoint.swift */,
 				5A7D94E32AA506D4001A97E8 /* GitHubService.swift */,
+				5A41C7BC2AADD75700418085 /* APIError.swift */,
 				5A7D94E72AA508DA001A97E8 /* Keys.swift */,
 				5A7D94E52AA5078A001A97E8 /* Models.swift */,
 				5A7D94D62AA5051E001A97E8 /* Assets.xcassets */,
@@ -154,8 +166,12 @@
 				5A7D94D52AA5051D001A97E8 /* ContentView.swift in Sources */,
 				5A7D94E82AA508DA001A97E8 /* Keys.swift in Sources */,
 				5A7D94E22AA506A2001A97E8 /* Endpoint.swift in Sources */,
+				5A41C7BD2AADD75700418085 /* APIError.swift in Sources */,
 				5A7D94E42AA506D4001A97E8 /* GitHubService.swift in Sources */,
+				5A41C7B52AAD0D4300418085 /* UserDetailView.swift in Sources */,
 				5A7D94D32AA5051D001A97E8 /* github_appleosApp.swift in Sources */,
+				5A41C7B92AAD0DFB00418085 /* RepositoryDetailView.swift in Sources */,
+				5A41C7B72AAD0DDC00418085 /* RepositoryRow.swift in Sources */,
 				5A7D94E62AA5078A001A97E8 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

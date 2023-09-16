@@ -22,6 +22,7 @@ enum GitHubEndpoint: Endpoint {
     case getUser(username: String)
     case getAuthUser
     case getStarred(username: String, pages: Int)
+    case getReadmeImages(owner: String, repo: String)
     
     var path: String {
         switch self {
@@ -31,6 +32,8 @@ enum GitHubEndpoint: Endpoint {
             return "/user"
         case .getStarred(let username, _):
             return "/github_starred/\(username)"
+        case .getReadmeImages(let owner, let repo):
+            return "/github_readme_images/\(owner)/\(repo)"
         }
     }
     
@@ -50,6 +53,8 @@ enum GitHubEndpoint: Endpoint {
         case .getAuthUser:
             return "GET"
         case .getStarred:
+            return "GET"
+        case .getReadmeImages:
             return "GET"
         }
     }
